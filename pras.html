@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAs - Cintia Vasconcelos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pompiere&display=swap');
+
+        :root {
+            --color-primary: #b9030f;
+            --color-secondary: #9e0004;
+            --color-accent: #70160e;
+            --color-dark: #161917;
+            --color-light: #e1e3db;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-light);
+            color: var(--color-dark);
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 50px;
+            background: linear-gradient(to top, var(--color-primary)0.5%, var(--color-dark) 80%);
+        }
+
+
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--color-light);
+            font-family: 'Cursive', sans-serif;
+            animation: glow 15s infinite ease-in-out;
+        }
+        @keyframes glow {
+            0%, 100% {
+            transform: scale(1);
+            text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
+            }
+            50% {
+            transform: scale(1.1);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: var(--color-light);
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        .navbar a:hover {
+            color: var(--color-primary);
+        }
+
+        .cta-button {
+            background-color: var(--color-primary);
+            color: var(--color-light);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-secondary);
+        }
+        .header-ids {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 10px;
+            background-color: var(--color-dark);
+        }
+
+        .header-ids a {
+            width: 60px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: var(--color-light);
+            border: 2px solid var(--color-light);
+            border-radius: 20%;
+            transition: all 0.3s ease;
+        }
+
+        .header-ids a:hover {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: var(--color-light);
+            box-shadow: 0 0 15px var(--color-primary);
+            transform: scale(1.1);
+        }
+
+        .introduction {
+            padding: 40px 20px;
+            background-color: var(--color-primary);
+            color: var(--color-light);
+            text-align: center;
+        }
+
+        .introduction h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .introduction p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .introduction ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .introduction ul li {
+            margin-bottom: 10px;
+        }
+
+        .section {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Pompiere', cursive;
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .section iframe {
+            width: 70%;
+            height: 800px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            margin: 40px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display:block;
+        }
+
+        @media (max-width: 768px) {
+            .section iframe {
+                height: 600px;
+            }
+            
+            .introduction h1 {
+                font-size: 2.5rem;
+            }
+        }
+     
+            footer {
+            position: relative;
+            background: linear-gradient(to top, var(--color-primary) 10%, var(--color-light) 90%);
+            color: var(--color-dark);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+            .social-icons {
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .social-icons a {
+                text-decoration: none;
+                color: var(--color-dark);
+                font-size: 1.5rem;
+            }
+
+            .social-icons a:hover {
+                color: var(--color-light);
+            }
+
+        
+            .footer-rights {
+                font-family: 'Pompiere', cursive;
+                font-size: 0.9rem;
+                padding-top: 200px;
+                color: var(--color-light);
+            }
+
+        .scroll-to-top, .scroll-to-bottom {
+            position: fixed;
+            bottom: 20px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .scroll-to-top {
+            right: 80px;
+            background-color: var(--color-primary);
+            color: var(--color-light);
+        }
+
+        .scroll-to-bottom {
+            left: 80px;
+            background-color: var(--color-secondary);
+            color: var(--color-light);
+        }
+
+        .scroll-to-top.visible, .scroll-to-bottom.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover, .scroll-to-bottom:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .scroll-to-top i, .scroll-to-bottom i {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">©</div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="sobre_mim.html">Sobre mim</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="pras.html">PRAs</a>
+            <a href="curriculum.html">Currículo</a>       
+         </nav>
+        <button class="cta-button"
+            onmouseover="showHoverText(this)" 
+            onmouseout="restoreOriginalText(this)" 
+            onclick="copyEmail(this)">Fale com a Cintia</button>
+    </header>
+
+    <div class="introduction">
+        <h1>O que é um PRA?</h1>
+        <p>Um PRA (Portfólio Reflexivo de Aprendizagem) é uma ferramenta educacional usada para registrar, documentar e refletir sobre o processo de aprendizado ao longo do tempo.</p>
+        <p>O objetivo principal é promover a autoavaliação e o pensamento crítico sobre o próprio aprendizado, ajudando o estudante a reconhecer seus pontos fortes, desafios e áreas de melhoria. Um PRA geralmente inclui:</p>
+        <ul>
+            <li><b>Evidências de aprendizado:</b> trabalhos concluídos, projetos, provas e atividades.</li>
+            <li><b>Reflexões pessoais:</b> descrições sobre como o aprendizado aconteceu, dificuldades enfrentadas e superações.</li>
+            <li><b>Metas de aprendizado:</b> objetivos e planos para continuar progredindo.</li>
+            <li><b>Feedback:</b> comentários de professores, colegas ou mentores.</li>
+        </ul>
+        <p>Cada número abaixo refere-se a um módulo, e clicar nele o levará ao respectivo conteúdo.</p>
+    </div>
+
+    <header class="header-ids">
+        <a href="#0769">0769</a>
+        <a href="#0770">0770</a>
+        <a href="#0771">0771</a>
+        <a href="#0797">0797</a>
+        <a href="#0798">0798</a>
+        <a href="#0799">0799</a>
+        <a href="#0800">0800</a>
+        <a href="#0801">0801</a>
+        <a href="#0802">0802</a>
+        <a href="#7846">7846</a>
+        <a href="#0804">0804</a>
+        <a href="#0805">0805</a>
+        <a href="#0806">0806</a>
+        <a href="#0809">0809</a>
+        <a href="#0810">0810</a>
+        <a href="#0811">0811</a>
+        <a href="#10788">10788</a>
+        <a href="#3933">3933</a>
+        <a href="#0816">0816</a>
+        <a href="#10791">10791</a>
+        <a href="#3935">3935</a>
+        <a href="#10792">10792</a>
+        <a href="#10793">10793</a>
+        <a href="#10794">10794</a>
+        <a href="#10795">10795</a>
+        <a href="#10790">10790</a>
+        <a href="#10871">10871</a>
+        <a href="#10872">10872</a>
+        <a href="#10873">10873</a>
+        <a href="#PCRT">PCRT</a>
+    </header>
+
+    <main>
+        <section id="0769" class="section">
+            <h2 class="section-title">Arquitetura interna do computador</h2>
+            <iframe src="documents/0769.pdf" alt="Document 0769"></iframe>
+        </section>
+        <section id="0770" class="section">
+            <h2 class="section-title">Dispositivos e periféricos</h2>
+            <iframe src="documents/0770.pdf" alt="Document 0770"></iframe>
+        </section>
+        <section id="0771" class="section">
+            <h2 class="section-title">Conexões de rede</h2>
+            <iframe src="documents/0771.pdf" alt="Document 0771"></iframe>
+        </section>
+        <section id="0797" class="section">
+            <h2 class="section-title">Sistemas operativos - tipologias</h2>
+            <iframe src="documents/0797.pdf" alt="Document 0797"></iframe>
+        </section>
+        <section id="0798" class="section">
+            <h2 class="section-title">Utilitários</h2>
+            <iframe src="documents/0798.pdf" alt="Document 0798"></iframe>
+        </section>
+        <section id="0799" class="section">
+            <h2 class="section-title">Sistemas de rede local</h2>
+            <iframe src="documents/0799.pdf" alt="Document 0799"></iframe>
+        </section>
+        <section id="0800" class="section">
+            <h2 class="section-title">Serviços adicionais de rede</h2>
+            <iframe src="documents/0800.pdf" alt="Document 0800"></iframe>
+        </section>
+        <section id="0801" class="section">
+            <h2 class="section-title">Administração de redes locais</h2>
+            <iframe src="documents/0801.pdf" alt="Document 0801"></iframe>
+        </section>
+        <section id="0802" class="section">
+            <h2 class="section-title">Processamento computacional</h2>
+            <iframe src="documents/0802.pdf" alt="Document 0802"></iframe>
+        </section>
+        <section id="7846" class="section">
+            <h2 class="section-title">Informática - noções básicas</h2>
+            <iframe src="documents/7846.pdf" alt="Document 7846"></iframe>
+        </section>
+        <section id="0804" class="section">
+            <h2 class="section-title">Algoritmos</h2>
+            <iframe src="documents/0804.pdf" alt="Document 0804"></iframe>
+        </section>
+        <section id="0805" class="section">
+            <h2 class="section-title">Estruturas de dados</h2>
+            <iframe src="documents/0805.pdf" alt="Document 0805"></iframe>
+        </section>
+        <section id="0806" class="section">
+            <h2 class="section-title">Princípios metodológicos de programação</h2>
+            <iframe src="documents/0806.pdf" alt="Document 0806"></iframe>
+        </section>
+        <section id="0809" class="section">
+            <h2 class="section-title">Programação em C/C++ - fundamentos</h2>
+            <iframe src="documents/0809.pdf" alt="Document 0809"></iframe>
+        </section>
+        <section id="0810" class="section">
+            <h2 class="section-title">Programação em C/C++ - avançada</h2>
+            <iframe src="documents/0810.pdf" alt="Document 0810"></iframe>
+        </section>
+        <section id="0811" class="section">
+            <h2 class="section-title">Análise de sistemas</h2>
+            <iframe src="documents/0811.pdf" alt="Document 0811"></iframe>
+        </section>
+        <section id="10788" class="section">
+            <h2 class="section-title">Fundamentos da linguagem SQL</h2>
+            <iframe src="documents/10788.pdf" alt="Document 10788"></iframe>
+        </section>
+        <section id="3933" class="section">
+            <h2 class="section-title">Administração de bases de dados para programadores</h2>
+            <iframe src="documents/3933.pdf" alt="Document 3933"></iframe>
+        </section>
+        <section id="0816" class="section">
+            <h2 class="section-title">Programação de sistemas distribuídos - JAVA</h2>
+            <iframe src="documents/0816.pdf" alt="Document 0816"></iframe>
+        </section>
+        <section id="10791" class="section">
+            <h2 class="section-title">Desenvolvimento de aplicações web em JAVA</h2>
+            <iframe src="documents/10791.pdf" alt="Document 10791"></iframe>
+        </section>
+        <section id="3935" class="section">
+            <h2 class="section-title">Programação em C#</h2>
+            <iframe src="documents/3935.pdf" alt="Document 3935"></iframe>
+        </section>
+        <section id="10792" class="section">
+            <h2 class="section-title">Programação ASP.Net Core MVC</h2>
+            <iframe src="documents/10792.pdf" alt="Document 10792"></iframe>
+        </section>
+        <section id="10793" class="section">
+            <h2 class="section-title">Fundamentos de Python</h2>
+            <iframe src="documents/10793.pdf" alt="Document 10793"></iframe>
+        </section>
+        <section id="10794" class="section">
+            <h2 class="section-title">Programação avançada com Python</h2>
+            <iframe src="documents/10794.pdf" alt="Document 10794"></iframe>
+        </section>
+        <section id="10795" class="section">
+            <h2 class="section-title">Segurança no desenvolvimento de software</h2>
+            <iframe src="documents/10795.pdf" alt="Document 10795"></iframe>
+        </section>
+        <section id="10790" class="section">
+            <h2 class="section-title">Projeto de programação</h2>
+            <iframe src="documents/10790.pdf" alt="Document 10790"></iframe>
+        </section>
+        <section id="10871" class="section">
+            <h2 class="section-title">Introdução à administração de sistemas</h2>
+            <iframe src="documents/10871.pdf" alt="Document 10871"></iframe>
+        </section>
+        <section id="10872" class="section">
+            <h2 class="section-title">Administração de sistemas</h2>
+            <iframe src="documents/10872.pdf" alt="Document 10872"></iframe>
+        </section>
+        <section id="10873" class="section">
+            <h2 class="section-title">Arquitetura de sistemas em cloud</h2>
+            <iframe src="documents/10873.pdf" alt="Document 10873"></iframe>
+        </section>
+        <section id="PCRT" class="section">
+            <h2 class="section-title">Prática em Contexto Real de Trabalho</h2>
+            <iframe src="documents/PCRT.pdf" alt="Document PCRT"></iframe>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://instagram.com/cintiahills" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/cintia-vasconcelos-428a78343" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/cintiahills" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-text">
+            <p class="footer-rights">Cintia Vasconcelos ® <br>Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top" id="scrollBtn"><i class="fas fa-arrow-up"></i></a>
+    <a href="#" class="scroll-to-bottom" id="scrollBottomBtn"><i class="fas fa-arrow-down"></i></a>
+
+    <script>
+
+        const email = "cintiahills@gmail.com";
+            
+            function showHoverText(button) {
+                if (button.innerText === "Fale com a Cintia") {
+                    button.innerText = "copiar e-mail";
+                }
+            }
+
+            function restoreOriginalText(button) {
+                if (button.innerText === "copiar e-mail" || button.innerText === "Copiado! 😎") {
+                    button.innerText = "Fale com a Cintia";
+                }
+            }
+
+            function copyEmail(button) {
+        const email = "cintiahills@gmail.com";  // Definido dentro da função para cada clique
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(email).then(() => {
+                button.innerText = "Copiado! 😎";
+            }).catch(() => {
+                fallbackCopyEmail(button);
+            });
+        } else {
+            fallbackCopyEmail(button);
+        }
+        }
+
+
+    function fallbackCopyEmail(button) {
+        const textarea = document.createElement("textarea");
+        textarea.value = email;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+
+        button.innerText = "Copiado! 😎";
+    }
+
+        
+        
+        const headerIdsLinks = document.querySelectorAll('.header-ids a');
+
+        headerIdsLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        const scrollBtn = document.getElementById('scrollBtn');
+        const scrollBottomBtn = document.getElementById('scrollBottomBtn');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+
+            if (window.scrollY < document.body.scrollHeight - window.innerHeight - 300) {
+                scrollBottomBtn.classList.add('visible');
+            } else {
+                scrollBottomBtn.classList.remove('visible');
+            }
+        });
+
+        scrollBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        scrollBottomBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

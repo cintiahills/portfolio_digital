@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Cintia Vasconcelos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pompiere&display=swap');
+
+        :root {
+            --color-primary: #b9030f;
+            --color-secondary: #9e0004;
+            --color-accent: #70160e;
+            --color-dark: #161917;
+            --color-light: #e1e3db;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-light);
+            color: var(--color-dark);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 50px;
+            background: linear-gradient(to top, var(--color-primary)0.5%, var(--color-dark) 80%);
+        }
+
+
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--color-light);
+            font-family: 'Cursive', sans-serif;
+            animation: glow 15s infinite ease-in-out;
+        }
+        @keyframes glow {
+            0%, 100% {
+            transform: scale(1);
+            text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
+            }
+            50% {
+            transform: scale(1.1);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: var(--color-light);
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+
+        .navbar a:hover {
+            color: var(--color-primary);
+        }
+
+        .cta-button {
+            background-color: var(--color-primary);
+            color: var(--color-light);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-secondary);
+        }
+        footer {
+            position: relative;
+            background:var(--color-primary);
+            color: var(--color-dark);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            position: absolute;
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            .social-icons a {
+                text-decoration: none;
+                color: var(--color-dark);
+                font-size: 1.5rem;
+            }
+
+            .social-icons a:hover {
+                color: var(--color-light);
+            }
+
+        
+            .footer-rights {
+                font-family: 'Pompiere', cursive;
+                font-size: 0.9rem;
+                padding-top: 50px;
+                color: var(--color-light);
+            }
+
+
+        .main-content {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--color-primary);
+            color: var(--color-light);
+        }
+
+        .main-title {
+            font-family: 'Lobster', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            max-width: 250px;
+            margin: 15px auto;
+            border-radius: 50%;
+            border: 4px solid var(--color-light);
+        }
+
+        .subtitle {
+            font-family: 'Pompiere', cursive;
+            font-size: 2rem;
+            margin: 15px 0;
+        }
+
+        .main-text {
+            font-family: 'Pompiere', cursive;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            max-width: 840px;
+            margin: 15px auto;
+        }
+
+        .email-copy-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .email-copy-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 20px;
+            background-color: var(--color-primary);
+            color: var(--color-light);
+            border: 2px solid var(--color-secondary);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-family: 'Pompiere', cursive;
+            transition: all 0.3s ease;
+        }
+
+        .email-copy-container:hover {
+            background-color: var(--color-secondary);
+            transform: scale(1.05);
+        }
+
+        .email-copy-container i {
+            font-size: 1.5rem;
+        }
+
+        #email-text {
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">©</div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="sobre_mim.html">Sobre mim</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="pras.html">PRAs</a>
+            <a href="curriculum.html">Currículo</a>       
+         </nav>
+        <button class="cta-button"
+            onmouseover="showHoverText(this)" 
+            onmouseout="restoreOriginalText(this)" 
+            onclick="copyEmail(this)">Fale com a Cintia</button>
+    </header>
+
+
+    <main>
+        <section class="main-content">
+            <h1 class="main-title">Sobre Mim</h1>
+            <img src="images/cintia.jpg" alt="Cintia Vasconcelos" class="about-image">
+            <h2 class="subtitle">Quem é Cintia Vasconcelos?</h2>
+            <p class="main-text">
+                Autodidata e apaixonada por tecnologia, música, pizza, neurociência e pelo entendimento das pessoas, iniciei minha carreira como Programadora de Informática em 2023, após concluir um curso de 1.445 horas no IEFP, onde aprendi backend, frontend, redes, análise de dados e infraestrutura de TI com Python, PHP, JavaScript, Flask, MySQL e Git, mas foi no Front-End onde eu me encontrei.
+
+                Minha paixão pelo Frontend me levou a trabalhar de forma autonoma em projetos que cobriram planejamento e desenvolvimento, ampliando conhecimentos em TypeScript, JavaScript, Python e PHP, consolidando minha criatividade em experiências digitais.
+
+                Além disso, sou fluente em Espanhol e Inglês, com noções de Italiano, tudo tambem aprendido pelo autoestudo. Fora da tecnologia, exploro música, neurociência e culinária, competindo até em pizza acrobática. Nos próximos 5 anos, planejo me formar em Ciências da Computação e criar interfaces interativas que unam design criativo e tecnologia moderna.
+            </p>
+
+            <section class="email-copy-section">
+                <div class="email-copy-container" 
+                     onmouseover="showHoverText()" 
+                     onmouseout="restoreOriginalText()" 
+                     onclick="copyEmail()">
+                    <i class="fas fa-envelope"></i>
+                    <span id="email-text">cintiahills@gmail.com</span>
+                </div>
+            </section>
+            
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://instagram.com/cintiahills" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/cintia-vasconcelos-428a78343" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/cintiahills" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-text">
+       
+            <p class="footer-rights">Cintia Vasconcelos ® <br>Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+
+        const email = "cintiahills@gmail.com";
+
+        // Função para mostrar texto de hover de forma independente
+        function showHoverText(element) {
+            if (element.innerText === "Fale com a Cintia" || element.innerText === email) {
+                element.innerText = "Clique para copiar";
+            }
+        }
+
+        // Função para restaurar o texto original de forma independente
+        function restoreOriginalText(element) {
+            if (element.innerText === "Clique para copiar" || element.innerText === "Copiado! 😎") {
+                if (element.classList.contains('cta-button')) {
+                    element.innerText = "Fale com a Cintia";
+                } else {
+                    element.innerText = email;
+                }
+            }
+        }
+
+        // Função para copiar o e-mail e alterar o texto apenas no botão clicado
+        function copyEmail(element) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(email).then(() => {
+                    element.innerText = "Copiado! 😎";
+                }).catch(() => {
+                    fallbackCopyEmail(element);
+                });
+            } else {
+                fallbackCopyEmail(element);
+            }
+        }
+
+        // Fallback para navegadores sem suporte ao Clipboard API
+        function fallbackCopyEmail(element) {
+            const textarea = document.createElement("textarea");
+            textarea.value = email;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+
+            const textElement = element.querySelector("span");
+            textElement.innerText = "Copiado! 😎";
+        }
+
+        // Event listeners para todos os botões de cópia
+        document.querySelectorAll('.cta-button, .email-copy-container').forEach(button => {
+            button.addEventListener('mouseover', function () { showHoverText(button); });
+            button.addEventListener('mouseout', function () { restoreOriginalText(button); });
+            button.addEventListener('click', function () { copyEmail(button); });
+        });
+
+
+    </script>
+</body>
+</html>
