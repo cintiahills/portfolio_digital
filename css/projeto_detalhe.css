@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pompiere&display=swap');
+:root {
+    --color-primary: #b9030f;
+    --color-secondary: #9e0004;
+    --color-accent: #70160e;
+    --color-dark: #161917;
+    --color-light: #e1e3db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-light);
+    font-family: 'Pompiere', cursive;
+    color: var(--color-dark);
+    margin: 0;
+    padding: 0;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInMoveDown 1s ease-in-out forwards;
+}
+
+@keyframes fadeInMoveDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    font-family: 'Lobster', cursive;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: var(--color-accent);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: var(--color-dark);
+    border-top: 1px solid var(--color-dark);
+    padding-top: 20px;
+    width: 100%;
+}
+
+.details div:first-child {
+    width: 77%;
+}
+
+.details div:last-child {
+    width: 20%;
+    text-align: right;
+}
+
+.launch {
+    margin-top: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.launch:hover {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+.launch::after {
+    content: "\2192";
+    font-size: 1.5rem;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.launch:hover::after {
+    margin-left: 20px;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Pompiere', cursive;
+}
+
+.back-button:hover {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}

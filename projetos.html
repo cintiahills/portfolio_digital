@@ -3,487 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
+    <meta name="description" content="Portfólio de projetos de Cintia Vasconcelos">
+    <link rel="preload" as="image" href="images/placeholder.png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lobster&family=Pompiere&display=swap" as="style">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projetos.css">
+    
     <title>Projetos - Cintia Vasconcelos</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pompiere&display=swap');
-
-        :root {
-            --color-primary: #b9030f;
-            --color-secondary: #9e0004;
-            --color-accent: #70160e;
-            --color-dark: #161917;
-            --color-light: #e1e3db;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-primary);
-            color: var(--color-light);
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0px 50px;
-            background: linear-gradient(to top, var(--color-primary)0.5%, var(--color-dark) 80%);
-        }
-
-
-        .logo {
-            font-size: 4rem;
-            font-weight: bold;
-            color: var(--color-light);
-            font-family: 'Cursive', sans-serif;
-            animation: glow 15s infinite ease-in-out;
-        }
-        @keyframes glow {
-            0%, 100% {
-            transform: scale(1);
-            text-shadow: 0 0 0px rgba(255, 255, 255, 0.8);
-            }
-            50% {
-            transform: scale(1.1);
-            text-shadow: 0 0 20px rgba(255, 255, 255, 1);
-            }
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: var(--color-light);
-            margin: 0 15px;
-            font-size: 1rem;
-        }
-
-        .navbar a:hover {
-            color: var(--color-primary);
-        }
-
-        .cta-button {
-            background-color: var(--color-primary);
-            color: var(--color-light);
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1rem;
-            border-radius: 5px;
-        }
-
-        .cta-button:hover {
-            background-color: var(--color-secondary);
-        }
-
-        .main-title {
-            font-family: 'Lobster', cursive;
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            text-align:center;
-        }
-
-
-        .title {
-            font-family: 'Lobster', cursive;
-            font-size: 2rem;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 5rem;
-        }
-
-        .project-card {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: var(--color-dark);
-            transition: transform 0.3s ease;
-            aspect-ratio: 16/9;
-            cursor: pointer;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .project-logo {
-            display: none; /* O logotipo não aparece inicialmente */
-            position: absolute;
-            top: 50%; /* Centraliza verticalmente */
-            left: 50%; /* Centraliza horizontalmente */
-            transform: translate(-50%, -50%);
-            width: 60px; /* Tamanho ajustado */
-            height: 60px; /* Tamanho ajustado */
-            border-radius: 50%;
-            object-fit: cover;
-            transition: opacity 0.3s ease;
-        }
-
-        .project-card:hover .project-logo {
-            display: block; /* O logotipo aparece no hover */
-            opacity: 1; /* Totalmente visível */
-        }
-
-        .project-card:hover .project-title {
-            opacity: 0; /* O título desaparece no hover */
-        }       
-        .project-card:hover .saber-mais {
-            opacity: 1; /* "Saber mais" já aparece, mantido */
-        }
-        .project-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1rem;
-            background: linear-gradient(transparent, var(--color-dark));
-            color: var(--color-light);
-            text-align: center;
-        }
-
-        .project-title {
-            font-family: 'Pompiere', cursive;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            transition: opacity 0.3s ease;
-        }
-
-        .project-card:hover .project-title {
-            opacity: 0;
-        }
-
-        .project-card:hover .saber-mais {
-            opacity: 1;
-        }
-
-        .saber-mais {
-            font-size: 1.25rem;
-            font-weight: bold;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            color: #f0f0f0; /* Cor clara para contraste */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra escura para destacar */
-   
-        }
-
-        .project-tech {
-            display: flex;
-            gap: 0.5rem;
-            transition: opacity 0.3s ease;
-        }
-
-        .project-card:hover .project-tech {
-            opacity: 0;
-        }
-
-        .tech-icon {
-            width: 24px;
-            height: 24px;
-            filter: brightness(1);
-        }
-
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        footer {
-            position: relative;
-            background-color: var(--color-primary);
-            color: var(--color-dark);
-            padding: 50px 0;
-            text-align: center;
-            margin-top: 30px;
-          
-        }
-
-        .social-icons {
-            position: absolute;
-            position: fixed;
-            left: 20px;
-            bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .social-icons a {
-            text-decoration: none;
-            color: var(--color-dark);
-            font-size: 1.5rem;
-        }
-
-        .social-icons a:hover {
-            color: var(--color-light);
-        }
-
-       
-        .footer-rights {
-            font-family: 'Pompiere', cursive;
-            font-size: 0.9rem;
-            color: var(--color-light);
-        }
-    </style>
 </head>
 <body>
-
+    <!-- Header -->
     <header class="header">
-        <div class="logo">©</div>
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer">©</div>
         <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="sobre_mim.html">Sobre mim</a>
             <a href="projetos.html">Projetos</a>
             <a href="pras.html">PRAs</a>
             <a href="curriculum.html">Currículo</a>       
-         </nav>
+        </nav>
         <button class="cta-button"
             onmouseover="showHoverText(this)" 
             onmouseout="restoreOriginalText(this)" 
-            onclick="copyEmail(this)">Fale com a Cintia</button>
+            onclick="copyEmail(this)">
+            Fale com a Cintia
+        </button>
     </header>
 
-    <h1 class="main-title">Projetos</h1>
-    <main class="projects-grid" id="projectsGrid"></main>
+    <!-- Conteúdo Principal -->
+    <main>
+        <h1 class="main-title">Projetos</h1>
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Projetos serão inseridos aqui via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
     <footer>
         <div class="social-icons">
-            <a href="https://instagram.com/cintiahills" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/cintia-vasconcelos-428a78343" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/cintiahills" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/cintiahills" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram" aria-label="Instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/cintia-vasconcelos-428a78343" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin" aria-label="LinkedIn"></i>
+            </a>
+            <a href="https://github.com/cintiahills" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-label="GitHub"></i>
+            </a>
         </div>
         <div class="footer-text">
-            <p class="footer-rights"> Cintia Vasconcelos ® <br>Todos os direitos reservados</p>
+            <p class="footer-rights">Cintia Vasconcelos ® <br>Todos os direitos reservados</p>
         </div>
     </footer>
 
-    <script>
-
-        const email = "cintiahills@gmail.com";
-            
-            function showHoverText(button) {
-                if (button.innerText === "Fale com a Cintia") {
-                    button.innerText = "copiar e-mail";
-                }
-            }
-
-            function restoreOriginalText(button) {
-                if (button.innerText === "copiar e-mail" || button.innerText === "Copiado! 😎") {
-                    button.innerText = "Fale com a Cintia";
-                }
-            }
-
-            function copyEmail(button) {
-        const email = "cintiahills@gmail.com";  // Definido dentro da função para cada clique
-        if (navigator.clipboard) {
-            navigator.clipboard.writeText(email).then(() => {
-                button.innerText = "Copiado! 😎";
-            }).catch(() => {
-                fallbackCopyEmail(button);
-            });
-        } else {
-            fallbackCopyEmail(button);
-        }
-        }
-
-
-    function fallbackCopyEmail(button) {
-        const textarea = document.createElement("textarea");
-        textarea.value = email;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-
-        button.innerText = "Copiado! 😎";
-    }
-
-        const projects = [
-                 {
-                url: "images/ferrari.png",
-                title: "Ferrari",
-                nome_logo: "ferrari.jpg",
-                description: "Uma Criação minha para o site da Ferrari.",
-                logo: "images/ferrari.jpg",
-                additionalInfo: "Este projeto foi criado para demonstrar luxo e performance.",
-                date: "2023-07-15"
-            },
-            {
-                url: "images/callidus.png",
-                title: "Callidus3.0",
-                nome_logo: "callidus.jpg",
-                description: "Projeto em desenvolvimento.",
-                logo: "images/callidus.jpg",
-                additionalInfo: "Feito em HTML CSS e JS em parceria com a CALLIDUS 3.0.",
-                date: "2023-09-01"
-            },
-            {
-                url: "images/25abril.png",
-                title: "25 de Abril, sempre!",
-                nome_logo: "25abril.jpg",
-                description: "Projeto simples para formulário especial comemorativo de 25 de Abril.",
-                logo: "images/25abril.jpg",
-                additionalInfo: "Um formulário criado para comemorar a liberdade em Portugal.",
-                date: "2023-04-25"
-            },
-            {
-                url: "images/graodareia.png",
-                title: "Restaurante Grão d'areia",
-                nome_logo: "graodareia.jpg",
-                description: "Página web para o restaurante Grão d'areia, desenvolvida em Python (Flask e Jinja) em conjunto com minha colega de curso Filipa Ferreira.",
-                logo: "images/graodareia.jpg",
-                additionalInfo: "Desenvolvido com Flask e integração de Jinja para o backend.",
-                date: "2023-11-20"
-            },
-            {
-                url: "images/canarite.png",
-                title: "Canarité",
-                nome_logo: "canarite.jpg",
-                description: "Página web para Loja de camisetas localizada em Gran Canária chamada Canarité. Trabalho desenvolvido em PHP.",
-                logo: "images/canarite.jpg",
-                additionalInfo: "Desenvolvimento voltado para e-commerce com PHP e MySQL.",
-                date: "2023-06-10"
-            },
-            {
-                url: "images/breve.png",
-                title: "em construção...",
-                nome_logo: "",
-                description: "Novos projetos incríveis estão a caminho! Fique atento para futuras atualizações.",
-                logo: "",
-                additionalInfo: "Estamos sempre trabalhando para trazer ideias inovadoras e soluções criativas.",
-                date: "Em breve"
-            },
-            {
-                url: "images/breve.png",
-                title: "em construção...",
-                nome_logo: "",
-                description: "Novos projetos incríveis estão a caminho! Fique atento para futuras atualizações.",
-                logo: "",
-                additionalInfo: "Estamos sempre trabalhando para trazer ideias inovadoras e soluções criativas.",
-                date: "Em breve"
-            },
-            {
-                url: "images/breve.png",
-                title: "em construção...",
-                nome_logo: "",
-                description: "Novos projetos incríveis estão a caminho! Fique atento para futuras atualizações.",
-                logo: "",
-                additionalInfo: "Estamos sempre trabalhando para trazer ideias inovadoras e soluções criativas.",
-                date: "Em breve"
-            },
-            {
-                url: "images/breve.png",
-                title: "em construção...",
-                nome_logo: "",
-                description: "Novos projetos incríveis estão a caminho! Fique atento para futuras atualizações.",
-                logo: "",
-                additionalInfo: "Estamos sempre trabalhando para trazer ideias inovadoras e soluções criativas.",
-                date: "Em breve"
-            },
-            {
-                url: "images/breve.png",
-                title: "em construção...",
-                nome_logo: "",
-                description: "Novos projetos incríveis estão a caminho! Fique atento para futuras atualizações.",
-                logo: "",
-                additionalInfo: "Estamos sempre trabalhando para trazer ideias inovadoras e soluções criativas.",
-                date: "Em breve"
-            }
-            ,{
-                url: "images/breve.png",
-                title: "em construção...",
-                nome_logo: "",
-                description: "Novos projetos incríveis estão a caminho! Fique atento para futuras atualizações.",
-                logo: "",
-                additionalInfo: "Estamos sempre trabalhando para trazer ideias inovadoras e soluções criativas.",
-                date: "Em breve"
-            },
-            {
-                url: "images/breve.png",
-                title: "em construção...",
-                nome_logo: "",
-                description: "Novos projetos incríveis estão a caminho! Fique atento para futuras atualizações.",
-                logo: "",
-                additionalInfo: "Estamos sempre trabalhando para trazer ideias inovadoras e soluções criativas.",
-                date: "Em breve"
-            },
-        ];
-        const techIcons = {
-            html: '<img src="icons/html-5.png" alt="HTML" class="tech-icon">',
-            css: '<img src="icons/css-3.png" alt="CSS" class="tech-icon">',
-            js: '<img src="icons/java-script.png" alt="JavaScript" class="tech-icon">',
-            php: '<img src="icons/php.png" alt="PHP" class="tech-icon">',
-            python: '<img src="icons/python.png" alt="Python" class="tech-icon">'
-        };
-
-        const gallery = document.getElementById('projectsGrid');
-
-        projects.forEach((project) => {
-            const projectCard = document.createElement('div');
-            projectCard.classList.add('project-card');
-
-            const img = document.createElement('img');
-            img.src = project.url;
-            img.alt = project.title;
-            img.classList.add('project-image');
-
-            const logo = document.createElement('img');
-            logo.src = project.logo;
-            logo.alt = `${project.title} Logo`;
-            logo.classList.add('project-logo');
-
-            const info = document.createElement('div');
-            info.classList.add('project-info');
-
-            const title = document.createElement('h3');
-            title.classList.add('project-title');
-            title.textContent = project.title;
-
-            const saberMais = document.createElement('div');
-            saberMais.classList.add('saber-mais');
-            saberMais.textContent = "Saber mais";
-
-            const tech = document.createElement('div');
-            tech.classList.add('project-tech');
-
-            if (project.title === "Restaurante Grão d'areia") {
-            tech.innerHTML = `${techIcons.html}${techIcons.css}${techIcons.python}`;
-            } else if (project.title === "Canarité") {
-            tech.innerHTML = `${techIcons.html}${techIcons.css}${techIcons.js}${techIcons.php}`;
-            } else if (project.title === "em construção...") {
-                title.innerHTML="";
-                logo.style.display = "none"; // Oculta o logotipo
-                tech.innerHTML = ""; 
-                saberMais.innerHTML = "Projeto em construção"; 
-            } else {
-            tech.innerHTML = `${techIcons.html}${techIcons.css}${techIcons.js}`;
-            }
-
-
-            info.appendChild(title);
-            info.appendChild(saberMais);
-            info.appendChild(tech);
-            projectCard.appendChild(img);
-            projectCard.appendChild(logo);
-            projectCard.appendChild(info);
-
-            projectCard.addEventListener('click', () => {
-                localStorage.setItem('project', JSON.stringify(project));
-                window.location.href = "projeto_detalhe.html";
-            });
-
-            gallery.appendChild(projectCard);
-        });
-    </script>
+    <script src="js/projetos.js" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>

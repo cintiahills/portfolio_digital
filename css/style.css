@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pompiere&display=swap');
+:root {
+    --color-primary: #b9030f;
+    --color-secondary: #9e0004;
+    --color-accent: #70160e;
+    --color-dark: #000000;
+    --color-light: #e1e3db;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+
+.logo {
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--color-dark);
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--color-light);
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--color-dark);
+}
+
+.cta-button {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-secondary);
+}
+footer {
+    position: relative;
+    background:var(--color-primary);
+    color: var(--color-dark);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.social-icons {
+    position: absolute;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .social-icons a {
+        text-decoration: none;
+        color: var(--color-dark);
+        font-size: 1.5rem;
+    }
+
+    .social-icons a:hover {
+        color: var(--color-light);
+    }
+
+
+    .footer-rights {
+        font-family: 'Pompiere', cursive;
+        font-size: 0.9rem;
+        padding-top: 50px;
+        color: var(--color-light);
+    }

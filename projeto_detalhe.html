@@ -7,142 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <title>Projeto - Cintia Vasconcelos</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pompiere&display=swap');
-
-        :root {
-            --color-primary: #b9030f;
-            --color-secondary: #9e0004;
-            --color-accent: #70160e;
-            --color-dark: #161917;
-            --color-light: #e1e3db;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--color-light);
-            font-family: 'Pompiere', cursive;
-            color: var(--color-dark);
-            margin: 0;
-            padding: 0;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(-50px);
-            animation: fadeInMoveDown 1s ease-in-out forwards;
-        }
-
-        @keyframes fadeInMoveDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px;
-            text-align: left;
-        }
-
-        h1 {
-            font-size: 4rem;
-            font-weight: 300;
-            font-family: 'Lobster', cursive;
-            margin-bottom: 20px;
-            color: var(--color-primary);
-        }
-
-        p {
-            font-size: 1.5rem;
-            line-height: 1.6;
-            margin-bottom: 40px;
-            font-weight: 300;
-            color: var(--color-accent);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 40px;
-            border-radius: 10px;
-        }
-
-        .details {
-            display: flex;
-            justify-content: space-between;
-            font-size: 1rem;
-            color: var(--color-dark);
-            border-top: 1px solid var(--color-dark);
-            padding-top: 20px;
-        }
-
-        .details div {
-            width: 30%;
-        }
-
-        .launch {
-            margin-top: 50px;
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            border: 2px solid var(--color-primary);
-            color: var(--color-primary);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .launch:hover {
-            border-color: var(--color-secondary);
-            color: var(--color-secondary);
-        }
-
-        .launch::after {
-            content: "\2192";
-            font-size: 1.5rem;
-            margin-left: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .launch:hover::after {
-            margin-left: 20px;
-        }
-
-        .back-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            border: 2px solid var(--color-primary);
-            color: var(--color-primary);
-            background-color: transparent;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Pompiere', cursive;
-        }
-
-        .back-button:hover {
-            border-color: var(--color-secondary);
-            color: var(--color-secondary);
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projeto_detalhe.css">
+   
 </head>
 
 <body>
+    <header class="header">
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer">©</div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="sobre_mim.html">Sobre mim</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="pras.html">PRAs</a>
+            <a href="curriculum.html">Currículo</a>       
+         </nav>
+    
+    </header>
 
     <div class="container content fade-in" id="project-content">
         <h1 id="project-title">Detalhes do Projeto</h1>
@@ -160,35 +41,21 @@
             </div>
         </div>
 
-        <a href="#" class="launch" id="launch-site">Visitar Site</a>
-    </div>
+        <a href="site" class="launch" id="launch-site" target="_blank">Visitar Site</a>
+        </div>
 
     <button class="back-button" onclick="goBack()">Voltar</button>
-
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-
-        window.onload = function () {
-    const content = document.getElementById('project-content');
-    const project = JSON.parse(localStorage.getItem('project'));
-
-         if (project) {
-                document.getElementById('project-title').textContent = project.title;
-                document.getElementById('project-image').src = project.url;
-                document.getElementById('project-description').textContent = project.description;
-                document.getElementById('additionalInfo').textContent = project.additionalInfo;
-                document.getElementById('date').textContent = project.date;
-                document.getElementById('launch-site').href = project.url; // Caso queira que o botão "Visitar Site" aponte para o URL do projeto.
-        }
-
-            setTimeout(() => {
-            content.classList.add('visible');
-        }, 1500);
-    };
-
-    </script>
+  <footer>
+        <div class="social-icons">
+            <a href="https://instagram.com/cintiahills" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/cintia-vasconcelos-428a78343" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/cintiahills" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-text">
+            <p class="footer-rights">Cintia Vasconcelos ® <br>Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <script src="js/projeto_detalhe.js" defer></script>
 </body>
 
 </html>
