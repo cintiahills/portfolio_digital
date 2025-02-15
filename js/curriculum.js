@@ -52,7 +52,7 @@ const animation = lottie.loadAnimation({
         let filePath = '';
         switch (lang) {
           case 'pt':
-            filePath = 'documents/cv.pdf';
+            filePath = 'documents/CV.pdf';
             break;
           case 'en':
             filePath = 'documents/cv-english.pdf';
