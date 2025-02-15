@@ -14,7 +14,7 @@ const animation = lottie.loadAnimation({
     mainButton.addEventListener('click', function () {
       if (!languageOptions.classList.contains('show')) {
         languageOptions.classList.add('show');
-        buttonText.textContent = 'não clique para não voltar';
+        buttonText.textContent = 'Clique no idioma selecionado abaixo';
       }
     });
   
