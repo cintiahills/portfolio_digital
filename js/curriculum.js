@@ -1,4 +1,3 @@
-// Carrega a animação Lottie
 const animation = lottie.loadAnimation({
     container: document.getElementById('lottie-animation'),
     renderer: 'svg',
@@ -12,26 +11,22 @@ const animation = lottie.loadAnimation({
     const buttonText = document.getElementById('buttonText');
     const languageOptions = document.getElementById('languageOptions');
   
-    // Quando o botão principal é clicado e os idiomas não estão visíveis, exibe o menu e altera o texto.
     mainButton.addEventListener('click', function () {
-      // Se o container de idiomas ainda não estiver visível:
       if (!languageOptions.classList.contains('show')) {
         languageOptions.classList.add('show');
         buttonText.textContent = 'não clique para não voltar';
       }
-      // Se já estiver visível, o clique não fará nada (lembre: "não clique para não voltar")
     });
   
-    // Ao passar o mouse sobre o botão principal (quando os idiomas estão visíveis), muda o texto para ":(".
     mainButton.addEventListener('mouseenter', function () {
       if (languageOptions.classList.contains('show')) {
-        buttonText.textContent = '☹️';
+        buttonText.textContent = '👇🏽';
       }
     });
   
     mainButton.addEventListener('mouseleave', function () {
       if (languageOptions.classList.contains('show')) {
-        buttonText.textContent = 'não clique para não voltar';
+        buttonText.textContent = 'Clique no idioma selecionado abaixo';
       }
     });
   
@@ -47,10 +42,8 @@ const animation = lottie.loadAnimation({
         button.textContent = button.dataset.originalText;
       });
   
-      // Clique no idioma: inicia o download do currículo correspondente
       button.addEventListener('click', function () {
         const lang = button.getAttribute('data-lang');
-        // Indica que o download está em andamento
         buttonText.textContent = 'Baixando...';
   
         languageOptions.classList.remove('show');
@@ -59,16 +52,16 @@ const animation = lottie.loadAnimation({
         let filePath = '';
         switch (lang) {
           case 'pt':
-            filePath = 'documents/CV.pdf';
+            filePath = 'documents/cv.pdf';
             break;
           case 'en':
-            filePath = 'documents/CV-en.pdf';
+            filePath = 'documents/cv-english.pdf';
             break;
           case 'es':
-            filePath = 'documents/CV-es.pdf';
+            filePath = 'documents/cv-español.pdf';
             break;
           case 'it':
-            filePath = 'documents/CV-it.pdf';
+            filePath = 'documents/cv-italiano.pdf';
             break;
           default:
             filePath = 'documents/CV.pdf';
