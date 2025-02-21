@@ -3,14 +3,24 @@
 
 const projects = [
     {
-        url: "images/25abril.png",
-        title: "25 de Abril, sempre!",
-        nome_logo: "25abril.jpg",
-        description: "Uma das primeiras páginas que criei: uma página estática para comemorar o 25 de Abril em Portugal, com um botão puramente ilustrativo levando a um formulário para perguntas sobre o evento.",
-        logo: "images/25abril.jpg",
-        additionalInfo: "Projeto simples para formulário especial comemorativo de 25 de Abril.",
-        date: "20-04-2024",
-        site:"https://cintiahills.github.io/25ofApril/"
+        url: "images/callidus.png",
+        title: "Callidus3.0",
+        nome_logo: "callidus.jpg",
+        description:"Uma versão demo do site da Callidus, criada para aprender, usar e explorar os fundamentos de HTML, CSS e JS.",
+        logo: "images/callidus.jpg",
+        additionalInfo: "Projeto demo Callidus 3.0",
+        date: "10-02-2025",
+        site:"https://cintiahills.github.io/Callidus_demo/"
+    },
+    {
+        url: "images/graodareia.png",
+        title: "Restaurante Grão d'areia",
+        nome_logo: "graodareia.jpg",
+        description: "Página web para o restaurante Grão d'areia. Desenvolvi o front-end em Python em conjunto com minha colega de curso Filipa Ferreira, que construiu o Backend.",
+        logo: "images/graodareia.jpg",
+        additionalInfo: "Desenvolvido com Flask e integração de Jinja para o backend.",
+        date: "13-12-2024",
+        site:"https://graodareia.onrender.com/"
     },
     {
         url: "images/ferrari.png",
@@ -43,24 +53,14 @@ const projects = [
         site:"https://github.com/cintiahills/canarite_demo?tab=readme-ov-file"
     },
     {
-        url: "images/graodareia.png",
-        title: "Restaurante Grão d'areia",
-        nome_logo: "graodareia.jpg",
-        description: "Página web para o restaurante Grão d'areia. Desenvolvi o front-end em Python em conjunto com minha colega de curso Filipa Ferreira, que construiu o Backend.",
-        logo: "images/graodareia.jpg",
-        additionalInfo: "Desenvolvido com Flask e integração de Jinja para o backend.",
-        date: "13-12-2024",
-        site:"https://graodareia.onrender.com/"
-    },
-    {
-        url: "images/callidus.png",
-        title: "Callidus3.0",
-        nome_logo: "callidus.jpg",
-        description:"Uma versão demo do site da Callidus, criada para aprender, usar e explorar os fundamentos de HTML, CSS e JS.",
-        logo: "images/callidus.jpg",
-        additionalInfo: "Projeto demo Callidus 3.0",
-        date: "10-02-2025",
-        site:"https://cintiahills.github.io/Callidus_demo/"
+        url: "images/25abril.png",
+        title: "25 de Abril, sempre!",
+        nome_logo: "25abril.jpg",
+        description: "Uma das primeiras páginas que criei: uma página estática para comemorar o 25 de Abril em Portugal, com um botão puramente ilustrativo levando a um formulário para perguntas sobre o evento.",
+        logo: "images/25abril.jpg",
+        additionalInfo: "Projeto simples para formulário especial comemorativo de 25 de Abril.",
+        date: "20-04-2024",
+        site:"https://cintiahills.github.io/25ofApril/"
     },
     {
         url: "images/breve.png",  

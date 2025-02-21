@@ -52,19 +52,19 @@ const animation = lottie.loadAnimation({
         let filePath = '';
         switch (lang) {
           case 'pt':
-            filePath = 'documents/CV.pdf';
+            filePath = 'documents/cintia-PT.pdf';
             break;
           case 'en':
-            filePath = 'documents/cv-english.pdf';
+            filePath = 'documents/ccintia-EN.pdf';
             break;
           case 'es':
-            filePath = 'documents/cv-español.pdf';
+            filePath = 'documents/cintia-ES.pdf';
             break;
           case 'it':
-            filePath = 'documents/cv-italiano.pdf';
+            filePath = 'documents/cintia-IT.pdf';
             break;
           default:
-            filePath = 'documents/CV.pdf';
+            filePath = 'documents/cintia-PT.pdf';
         }
   
         window.open(filePath, '_blank');
