@@ -6,24 +6,25 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
     <title>Sobre Mim - Cintia Vasconcelos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-       <link rel="stylesheet" href="css/style.css">
-       <link rel="stylesheet" href="css/sobre_mim.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sobre_mim.css">
 </head>
 <body>
-    <header class="header">
+      <header class="header">
         <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer">©</div>
-        <nav class="navbar">
+            <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="sobre_mim.html">Sobre mim</a>
             <a href="projetos.html">Projetos</a>
-            <a href="pras.html">PRAs</a>
+            <!--  <a href="certificados.html">Certificados</a>-->
             <a href="curriculum.html">Currículo</a>       
          </nav>
-        <button class="cta-button"
+        <button class="cta-button" 
             onmouseover="showHoverText(this)" 
             onmouseout="restoreOriginalText(this)" 
-            onclick="copyEmail(this)">Fale com a Cintia</button>
+            onclick="openMailClient(this)">
+        Me mande um e-mail
+        </button>
     </header>
 
 
@@ -38,67 +39,74 @@
                 Minha paixão pelo Frontend me levou a trabalhar de forma autonoma em projetos que cobriram planejamento e desenvolvimento, ampliando conhecimentos em TypeScript, JavaScript, Python e PHP, consolidando minha criatividade em experiências digitais.
 
                 Além disso, sou fluente em Espanhol e Inglês, com noções de Italiano, tudo tambem aprendido pelo autoestudo. Fora da tecnologia, exploro música, neurociência e culinária, competindo até em pizza acrobática. Nos próximos 5 anos, planejo me formar em Ciências da Computação e criar interfaces interativas que unam design criativo e tecnologia moderna.
-                <br>Minhas habilidades:
-            <section class="skills">
-                <p></p>
-                <div class="skills-icons">
-                  <div class="skill">
-                    <i class="fab fa-html5" title="HTML5"></i>
-                  </div>
-                  <div class="skill">
-                    <i class="fab fa-css3-alt" title="CSS3"></i>
-                  </div>
-                  <div class="skill">
-                    <i class="fab fa-js" title="JavaScript"></i>
-                  </div>
-                  <div class="skill">
-                    <span class="tech-icon" title="TypeScript">TS</span>
-                  </div>
-                  <div class="skill">
-                    <i class="fab fa-angular" title="Angular"></i>
-                  </div>
-                  <div class="skill">
-                    <i class="fab fa-php" title="PHP"></i>
-                  </div>
-                  <div class="skill">
-                    <i class="fas fa-database" title="MySQL"></i>
-                  </div>
-                  <div class="skill">
-                    <i class="fab fa-git-alt" title="Git"></i>
-                  </div>
-                  <div class="skill">
-                    <i class="fab fa-microsoft" title="Azure DevOps"></i>
-                  </div>
-                  <div class="skill">
-                    <span class="tech-icon" title="C">C</span>
-                  </div>
-                  <div class="skill">
-                    <span class="tech-icon" title="C++">C++</span>
-                  </div>
-                  <div class="skill">
-                    <span class="tech-icon" title="C#">C#</span>
-                  </div>
-                  <div class="skill">
-                    <span class="tech-icon" title="Java">Java</span>
-                  </div>
-                  <div class="skill">
-                    <i class="fab fa-python" title="Python"></i>
-                  </div>
-                </div>
+                <br><br>Minhas habilidades:
             </p>
-              
-              </section>
             
-              <section class="email-copy-section">
-                <div class="email-copy-container" 
-                     onmouseover="showHoverText()" 
-                     onmouseout="restoreOriginalText()" 
-                     onclick="copyEmail()">
-                    <i class="fas fa-envelope"></i>
-                    <span id="email-text">Entre em contacto!</span>
+            <!-- SEÇÃO DE HABILIDADES -->
+            <section class="skills">
+                <div class="skills-icons">
+                    <div class="skill">
+                        <i class="fab fa-html5" title="HTML5"></i>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-js" title="JavaScript"></i>
+                    </div>
+                    <div class="skill">
+                        <span class="tech-icon" title="TypeScript">TS</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-angular" title="Angular"></i>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-php" title="PHP"></i>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-database" title="MySQL"></i>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-git-alt" title="Git"></i>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-microsoft" title="Azure DevOps"></i>
+                    </div>
+                    <div class="skill">
+                        <span class="tech-icon" title="C">C</span>
+                    </div>
+                    <div class="skill">
+                        <span class="tech-icon" title="C++">C++</span>
+                    </div>
+                    <div class="skill">
+                        <span class="tech-icon" title="C#">C#</span>
+                    </div>
+                    <div class="skill">
+                        <span class="tech-icon" title="Java">Java</span>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-python" title="Python"></i>
+                    </div>
                 </div>
             </section>
+            
+            <!-- BOTÕES DE CONTATO DA SEÇÃO (sem atributos onclick, onmouseover, etc.) -->
+            <div class="contact-buttons-section">
+                <div class="email-container contact-button">
+                    <span class="email-text ">Clique para me mandar um e-mail</span>
+             
+                </div>
+
+                <div class="telegram-container contact-button">
+                    <span class="telegram-text ">Clique para abrir meu telegram </span>
+            </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Elementos para confetti e mensagens -->
+    <div id="thankYouMessage" class="thankYouMessage"></div>
+    <canvas id="confettiCanvas" class="confettiCanvas"></canvas>
 
     <footer>
         <div class="social-icons">
@@ -107,11 +115,11 @@
             <a href="https://github.com/cintiahills" target="_blank"><i class="fab fa-github"></i></a>
         </div>
         <div class="footer-text">
-       
             <p class="footer-rights">Cintia Vasconcelos ® <br>Todos os direitos reservados</p>
         </div>
     </footer>
-    <script src="js/sobre_mim.js" defer></script>
+
+    <!-- ORDEM IMPORTANTE: script.js primeiro, depois sobre_mim.js -->
     <script src="js/script.js" defer></script>
-</body>
+    <script src="js/sobre_mim.js" defer></script>
 </html>

@@ -11,20 +11,23 @@
   
 </head>
 <body>
-    <header class="header">
+     <header class="header">
         <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer">©</div>
             <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="sobre_mim.html">Sobre mim</a>
             <a href="projetos.html">Projetos</a>
-            <a href="pras.html">PRAs</a>
+         <!--  <a href="certificados.html">Certificados</a>-->
             <a href="curriculum.html">Currículo</a>       
          </nav>
-        <button class="cta-button"
+        <button class="cta-button" 
             onmouseover="showHoverText(this)" 
             onmouseout="restoreOriginalText(this)" 
-            onclick="copyEmail(this)">Fale com a Cintia</button>
+            onclick="openMailClient(this)">
+        Me mande um e-mail
+        </button>
     </header>
+
 
     <main class="main">
         <section class="hero">
@@ -32,19 +35,26 @@
                 <div class="hero-text">
                     <h1 class="hero-title">Cintia</h1>
                     <h2 class="hero-subtitle">VASCONCELOS</h2>
-                    <p>Eu crio interfaces digitais atraentes e funcionais que conectam os usuários a experiências incríveis.</p>
+                    <p class="slogan">Eu crio interfaces digitais atraentes e funcionais que conectam os usuários a experiências incríveis.</p>
                     <button class="hero-button" 
                         onmouseover="showHoverText(this)" 
                         onmouseout="restoreOriginalText(this)" 
-                        onclick="copyEmail(this)">Fale com a Cintia</button>
+                        onclick="openTelegram(this)">Fale comigo agora 📲</button>
                         <div id="lottie-animation" class="lottie-container"></div>
                 </div>
                 <div class="hero-image">
-                    <img src="images/cintia.jpg" alt="Hero Image">
+                    <img src="images/metade.png" alt="Hero Image">
                 </div>
             </div>
         </section>
     </main>
+<div id="thankYouMessage" class="thankYouMessage">
+</div>
+<canvas id="confettiCanvas" class="confettiCanvas"></canvas>
+
+
+
+    </body>
     <footer>
         <div class="social-icons">
             <a href="https://instagram.com/cintiahills" target="_blank"><i class="fab fa-instagram"></i></a>

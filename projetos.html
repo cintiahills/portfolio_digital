@@ -16,22 +16,23 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+      <header class="header">
         <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer">©</div>
-        <nav class="navbar">
+            <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="sobre_mim.html">Sobre mim</a>
             <a href="projetos.html">Projetos</a>
-            <a href="pras.html">PRAs</a>
+            <!--  <a href="certificados.html">Certificados</a>-->
             <a href="curriculum.html">Currículo</a>       
-        </nav>
-        <button class="cta-button"
+         </nav>
+        <button class="cta-button" 
             onmouseover="showHoverText(this)" 
             onmouseout="restoreOriginalText(this)" 
-            onclick="copyEmail(this)">
-            Fale com a Cintia
+            onclick="openMailClient(this)">
+        Me mande um e-mail
         </button>
     </header>
+
 
     <!-- Conteúdo Principal -->
     <main>

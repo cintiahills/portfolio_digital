@@ -2,8 +2,8 @@
 .main-content {
     text-align: center;
     padding: 30px 20px;
-    background-color: var(--color-primary);
-    color: var(--color-light);
+    background-color: var(--color-light);
+    color: var(--color-primary);
 }
 
 .main-title {
@@ -33,34 +33,37 @@
     margin: 15px auto;
 }
 
-.email-copy-section {
+.email-telegram-section {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 40px 0;
 }
 
-.email-copy-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 20px;
-    background-color: var(--color-primary);
-    color: var(--color-light);
-    border: 2px solid var(--color-secondary);
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.2rem;
+.email-container, .telegram-container {
+
+ 
+    color: var(--color-dark);
+     font-size: 1.2rem;
     font-family: 'Pompiere', cursive;
-    transition: all 0.3s ease;
+    transition: all 1.5s ease;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
-.email-copy-container:hover {
+.email-text:hover,.telegram-text:hover, .skill:hover{
+    color: var(--color-secondary);
+    cursor: pointer;
+    
+   
+}
+.skill:hover{
     background-color: var(--color-secondary);
-    transform: scale(1.05);
+    cursor:default;
+     transform: scale(1.3);
 }
 
-.email-copy-container i {
+.email-container i, .telegram-container i {
     font-size: 1.5rem;
 }
 
