@@ -101,3 +101,416 @@ footer {
         pointer-events: none;
         z-index: 9999; /* Muito alto para ficar sobre tudo */
     }
+
+    /*********************************************************/
+    /* =====================================================
+   RESPONSIVIDADE MOBILE-ONLY - ADICIONAR NO FINAL DO style.css
+   ESTA SOLUÇÃO SÓ AFETA TELAS PEQUENAS (MOBILE/TABLET)
+   ===================================================== */
+
+/* IMPORTANTE: Verifique se tem esta meta tag no <head> de TODAS as páginas HTML:
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+*/
+
+/* ==========================================
+   APENAS PARA TABLETS (768px ou menor)
+   ========================================== */
+@media screen and (max-width: 768px) {
+    
+    /* HEADER - Reorganiza em mobile */
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .navbar {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .logo {
+        font-size: 50px;
+    }
+    
+    /* HERO SECTION - Empilha elementos */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-text, .hero-image {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .hero-title {
+        font-size: 8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    /* TÍTULOS PRINCIPAIS */
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    
+    .introduction h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* PROJECTS GRID - Uma coluna */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+    
+    /* JOURNEY CARDS - Ajusta layout */
+    .journey-card {
+        padding: 25px 20px;
+    }
+    
+    .journey-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .status-badge {
+        position: static;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+    
+    /* SKILLS GRID - Ajusta colunas */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    /* STATS GRID - Duas colunas */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* CONTAINERS - Menos padding */
+    .container {
+        padding: 0 20px;
+    }
+    
+    .introduction, .main-content {
+        padding: 30px 20px;
+    }
+    
+    /* ABOUT IMAGE - Menor em mobile */
+    .about-image {
+        max-width: 200px;
+    }
+    
+    /* EMAIL/TELEGRAM SECTION - Empilha */
+    .email-telegram-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* DETAILS SECTION - Empilha informações */
+    .details {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .details div:first-child,
+    .details div:last-child {
+        width: 100%;
+        text-align: left;
+    }
+    
+    /* DOWNLOAD SECTION */
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .title {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.6rem;
+    }
+    
+    .lottie-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    /* IFRAME - Ajusta altura */
+    .section iframe {
+        height: 500px;
+    }
+    
+    /* SOCIAL ICONS - Centraliza em mobile */
+    .social-icons {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+}
+
+/* ==========================================
+   APENAS PARA CELULARES (480px ou menor)
+   ========================================== */
+@media screen and (max-width: 480px) {
+    
+    /* HERO - Ajustes para telas muito pequenas */
+    .hero-title {
+        font-size: 6rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    /* PROJECTS GRID - Menos padding */
+    .projects-grid {
+        padding: 1rem;
+    }
+    
+    /* CONTAINER - Padding mínimo */
+    .container {
+        padding: 0 15px;
+    }
+    
+    .introduction, .main-content {
+        padding: 20px 15px;
+    }
+    
+    /* JOURNEY CARDS - Padding reduzido */
+    .journey-card {
+        padding: 20px 15px;
+    }
+    
+    /* STATS GRID - Uma coluna em celulares pequenos */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* BOTÕES - Tamanho adequado */
+    .cta-button, .hero-button, .download-button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    /* SKILLS ICONS - Menores */
+    .skills-icons .skill {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem;
+    }
+    
+    /* LOTTIE - Menor ainda */
+    .lottie-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* IFRAME - Altura reduzida */
+    .section iframe {
+        height: 400px;
+    }
+    
+    /* SCROLL BUTTONS - Menores */
+    .scroll-to-top, .scroll-to-bottom {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .scroll-to-top {
+        right: 15px;
+    }
+    
+    .scroll-to-bottom {
+        left: 15px;
+    }
+}
+
+/* ==========================================
+   CORREÇÕES ESPECÍFICAS SOLICITADAS
+   ========================================== */
+
+/* 1. CORREÇÃO PARA SCROLL NO IPAD */
+@media screen and (max-width: 1024px) {
+    body, html {
+        overflow-x: hidden;
+        overflow-y: auto; /* Garante scroll vertical */
+        -webkit-overflow-scrolling: touch; /* Scroll suave no iOS */
+    }
+    
+    .container, main, section {
+        overflow: visible; /* Remove overflow hidden que bloqueia scroll */
+    }
+}
+
+/* 2. FOTO DA HOME DESAPARECE NO MOBILE */
+@media screen and (max-width: 768px) {
+    .hero-image {
+        display: none !important;
+    }
+    
+    .hero-text {
+        max-width: 100% !important;
+        text-align: center;
+    }
+}
+
+/* 3. MENU MOBILE PARA TODAS AS PÁGINAS */
+@media screen and (max-width: 768px) {
+    
+    /* Header mobile */
+    .header {
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row !important; /* Manter em linha no mobile para o menu */
+    }
+    
+    /* CORREÇÃO ESPECÍFICA PARA CERTIFICADOS */
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column !important;
+        cursor: pointer !important;
+        padding: 8px !important;
+        background: none !important;
+        border: none !important;
+        z-index: 1001 !important;
+        order: 3 !important;
+    }
+    
+    .menu-toggle span {
+        width: 25px !important;
+        height: 3px !important;
+        background: var(--color-primary) !important;
+        margin: 3px 0 !important;
+        transition: 0.3s !important;
+        border-radius: 2px !important;
+        display: block !important;
+    }
+    
+    /* Animação do menu toggle quando ativo */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px) !important;
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px) !important;
+    }
+    
+    /* Criar menu hamburguer se não existir (outras páginas) */
+    .header:not(:has(.menu-toggle))::after {
+        content: "☰";
+        font-size: 24px;
+        color: var(--color-primary);
+        cursor: pointer;
+        display: block;
+        order: 3;
+        padding: 10px;
+        z-index: 1001;
+    }
+    
+    /* Esconder navbar normal em mobile */
+    .navbar {
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-light);
+        flex-direction: column !important;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+    
+    /* Quando clicado, mostrar menu - para certificados */
+    .navbar.mobile-active {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    /* Quando clicado, mostrar menu - para outras páginas */
+    .header.menu-open .navbar {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Estilo dos links no menu mobile */
+    .navbar a {
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(185, 3, 15, 0.1);
+        font-size: 1.1rem;
+        display: block;
+    }
+    
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+    
+    /* Logo mantém posição */
+    .logo {
+        order: 1;
+        font-size: 50px !important;
+    }
+    
+    /* CTA button some em mobile ou fica pequeno */
+    .cta-button {
+        order: 2;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+/* ==========================================
+   GARANTIA DE QUE IMAGENS NÃO QUEBREM
+   ========================================== */
+@media screen and (max-width: 768px) {
+    img, video, iframe {
+        max-width: 100%;
+        height: auto;
+    }
+}
+.clicandoAqui{
+    text-decoration: none;
+    color:inherit;
+}
+.clicandoAqui:hover{
+    color:var(--color-primary);
+}

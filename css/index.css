@@ -68,6 +68,8 @@ text-align: right;
 .hero-text p {
 font-size: 1.2rem;
 margin: 20px 0;
+    font-family: 'Pompiere', cursive;
+
 }
 
 .hero-button {
@@ -125,3 +127,4 @@ margin-left: 10px;
 .slogan {
     color: var(--color-dark)
 }
+

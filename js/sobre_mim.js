@@ -17,13 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-function openEmailFromSection(button) {
-    window.location.href = "mailto:cintiahills@gmail.com";
-    showSectionThankYouMessage();
-}
-
-function openTelegramFromSection(button) {
-    window.location.href = "https://t.me/cintiahills";
-    showSectionThankYouMessage();
-}
 

@@ -18,7 +18,7 @@ const projects = [
         nome_logo: "graodareia.jpg",
         description: "Página web para o restaurante Grão d'areia. Desenvolvi o front-end em Python em conjunto com minha colega de curso Filipa Ferreira, que construiu o Backend.",
         logo: "images/graodareia.jpg",
-        additionalInfo: "Desenvolvido com Flask e integração de Jinja para o backend.",
+        additionalInfo: "Desenvolvido com Flask e integração de Jinja para o backend. ⚠️ Devido ao uso do Render, o carregamento da pagina pode demorar de 1 a 3 minutos.",
         date: "13-12-2024",
         site:"https://graodareia.onrender.com/"
     },
