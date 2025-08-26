@@ -46,7 +46,13 @@ align-items: center;
   border-radius: 10px;
 }
 
-
+.footer-rights {
+    font-family: 'Pompiere', cursive;
+    font-size: 0.9rem;
+    margin-top: -100px;
+    color: var(--color-dark);
+    margin-bottom: 0;
+}
 .hero-title {
 font-family: 'Lobster', cursive;
 font-size: 15rem;
