@@ -28,6 +28,7 @@ body {
     line-height: 1.8;
     max-width: 840px;
     margin: 15px auto;
+    color:var(--color-dark )
 }
 .container {
     max-width: 1000px;
@@ -64,6 +65,9 @@ body {
     font-family: 'Lobster', cursive;
     font-size: 3rem;
     margin-bottom: 20px;
+}
+.title-jornada {
+    font-size:9px;
 }
 
 .section-title {

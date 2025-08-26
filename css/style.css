@@ -8,14 +8,24 @@
     --color-superlight:rgb(241, 83, 83);
 }
 
+html {
+    overflow-x: hidden; /* Elimina scroll horizontal */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--color-light);
     color: var(--color-dark);
+    overflow-x: hidden; /* Elimina scroll horizontal */
+    min-height: 100vh; /* Garante altura mínima */
+    box-sizing: border-box;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box; /* Evita overflow por padding/margin */
+}
 
 .header {
     display: flex;
@@ -23,7 +33,6 @@ body {
     align-items: center;
     padding: 0px 50px;
 }
-
 
 .logo {
     font-size: 80px;
@@ -57,16 +66,17 @@ body {
 .cta-button:hover {
     background-color: var(--color-light);
 }
+
 footer {
     position: relative;
-    background:var(--color-light);
+    background: var(--color-light);
     color: var(--color-dark);
     padding: 10px 0;
     text-align: center;
+    margin-top: auto; /* Empurra footer para baixo */
 }
 
 .social-icons {
-    position: absolute;
     position: fixed;
     left: 20px;
     bottom: 20px;
@@ -75,35 +85,35 @@ footer {
     gap: 10px;
 }
 
-    .social-icons a {
-        text-decoration: none;
-        color: var(--color-secondary);
-        font-size: 1.5rem;
-    }
+.social-icons a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+}
 
-    .social-icons a:hover {
-        color: var(--color-dark);
-    }
+.social-icons a:hover {
+    color: var(--color-dark);
+}
 
+.footer-rights {
+    font-family: 'Pompiere', cursive;
+    font-size: 0.9rem;
+    padding-top: 50px;
+    color: var(--color-dark);
+}
 
-    .footer-rights {
-        font-family: 'Pompiere', cursive;
-        font-size: 0.9rem;
-        padding-top: 50px;
-        color: var(--color-dark);
-    }
-    .confettiCanvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 9999; /* Muito alto para ficar sobre tudo */
-    }
+.confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999; /* Muito alto para ficar sobre tudo */
+}
 
-    /*********************************************************/
-    /* =====================================================
+/*********************************************************/
+/* =====================================================
    RESPONSIVIDADE MOBILE-ONLY - ADICIONAR NO FINAL DO style.css
    ESTA SOLUÇÃO SÓ AFETA TELAS PEQUENAS (MOBILE/TABLET)
    ===================================================== */
@@ -160,7 +170,6 @@ footer {
     .main-title {
         font-size: 2.5rem;
     }
-    
     
     .introduction h1 {
         font-size: 2.5rem;
@@ -507,10 +516,12 @@ footer {
         height: auto;
     }
 }
+
 .clicandoAqui{
     text-decoration: none;
     color:inherit;
 }
+
 .clicandoAqui:hover{
     color:var(--color-primary);
 }
