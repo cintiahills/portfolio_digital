@@ -98,8 +98,8 @@ footer {
 .footer-rights {
     font-family: 'Pompiere', cursive;
     font-size: 0.9rem;
-    padding-top: 50px;
     color: var(--color-dark);
+    margin-top: -10px;
 }
 
 .confettiCanvas {

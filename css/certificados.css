@@ -64,7 +64,7 @@ body {
 .introduction h1 {
     font-family: 'Lobster', cursive;
     font-size: 3rem;
-    margin-bottom: 20px;
+ 
 }
 .title-jornada {
     font-size:9px;
@@ -478,6 +478,9 @@ body {
 .footer-text {
     text-align: center;
     font-size: 0.8rem;
+}
+.container{
+   margin-top: 20px;
 }
 
 .mobile-summary {
