@@ -73,6 +73,14 @@
     animation: fadeUp 0.8s ease-out forwards 0.2s;
 }
 
+.emoji-mobile {
+    display: none;
+}
+
+.emoji-desktop {
+    display: inline;
+}
+
 .download-container {
     display: flex;
     flex-direction: column;
@@ -166,7 +174,7 @@
 @media (max-width: 968px) {
     .content-wrapper {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1rem;
         text-align: center;
     }
 
@@ -176,12 +184,25 @@
 
     .subtitle {
         font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .emoji-desktop {
+        display: none;
+    }
+
+    .emoji-mobile {
+        display: inline;
     }
 
     .lottie-container {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
+ 
+}
+.download-button {
+    margin-top: -200px;
 }
 .language-options {
     margin-top: 1rem;
@@ -208,4 +229,6 @@
   .language-option:hover {
     background-color: var(--color-primary);
   }
-  
+  .footer {
+  padding:0;
+  }

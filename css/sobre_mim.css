@@ -144,6 +144,32 @@
         box-shadow: none;
         backdrop-filter: none;
         padding: 0;
+        order: 1;
+    }
+    
+    .main-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main-title {
+        order: 0;
+    }
+    
+    .about-image {
+        order: 0;
+    }
+    
+    .subtitle {
+        order: 0;
+    }
+    
+    .main-text {
+        order: 0;
+    }
+    
+    .contact-buttons-section {
+        order: 2;
     }
     
     .skills h2 {
@@ -155,10 +181,13 @@
     }
     
     .skills-icons {
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         justify-content: center;
         gap: 1rem;
+        max-width: 400px;
+        margin: 0 auto;
     }
     
     .skills-icons .skill {
@@ -170,4 +199,6 @@
     .skills-icons .skill span.tech-icon {
         font-size: 12px;
     }
+
+   
 }

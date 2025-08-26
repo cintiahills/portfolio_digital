@@ -150,4 +150,10 @@ img {
     color: var(--color-secondary);
 }
 
-
+@media (max-width: 768px) {
+    .back-button {
+        position: static;
+        margin: 20px auto;
+        display: block;
+    }
+}
