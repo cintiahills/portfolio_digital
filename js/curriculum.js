@@ -192,19 +192,19 @@ const CurriculumDownload = {
                 let filePath = '';
                 switch (lang) {
                     case 'pt':
-                        filePath = 'documents/cintia-PT.pdf';
+                        filePath = 'documents/pt_Cintia.pdf';
                         break;
                     case 'en':
-                        filePath = 'documents/cintia-EN.pdf';
+                        filePath = 'documents/en_Cintia.pdf';
                         break;
                     case 'es':
-                        filePath = 'documents/cintia-ES.pdf';
+                        filePath = 'documents/es_Cintia.pdf';
                         break;
                     case 'it':
-                        filePath = 'documents/cintia-IT.pdf';
+                        filePath = 'documents/it_Cintia.pdf';
                         break;
                     default:
-                        filePath = 'documents/cintia-PT.pdf';
+                        filePath = 'documents/pt_Cintia.pdf';
                 }
 
                 // 🎉 CONFETTI CELEBRATION! 🎉
