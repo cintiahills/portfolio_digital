@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Adiciona efeito de hover também
         sectionEmailBtn.addEventListener("mouseenter", () => {
-            sectionEmailBtn.textContent = "Clique para abrir";
+            sectionEmailBtn.textContent = "Click to open";
         });
         
         sectionEmailBtn.addEventListener("mouseleave", () => {
-            sectionEmailBtn.textContent = "Clique para me mandar um e-mail";
+            sectionEmailBtn.textContent = "Click here to open my Telegram";
         });
     }
 
@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Adiciona efeito de hover também
         sectionTelegramBtn.addEventListener("mouseenter", () => {
-            sectionTelegramBtn.textContent = "Abrir Telegram";
+            sectionTelegramBtn.textContent = "Open Telegram";
         });
         
         sectionTelegramBtn.addEventListener("mouseleave", () => {
-            sectionTelegramBtn.textContent = "Clique para abrir meu telegram";
+            sectionTelegramBtn.textContent = "Click to open my telegram";
         });
     }
 });
